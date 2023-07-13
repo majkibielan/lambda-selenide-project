@@ -24,15 +24,15 @@ public class LoginPage {
     }
 
     public AccountPage performValidLogin() {
-        emalInput.sendKeys(LOGIN);
-        passwordInput.sendKeys(PASSWORD);
+        emalInput.val(LOGIN);
+        passwordInput.val(PASSWORD);
         loginBtn.click();
         return page(AccountPage.class);
     }
 
     public String performInvalidLogin() {
-        emalInput.sendKeys("testemail@mail.test");
-        passwordInput.sendKeys("test");
+        emalInput.val("testemail@mail.test");
+        passwordInput.val("test");
         loginBtn.click();
         String alertText = alertMessage.text();
         return alertText;

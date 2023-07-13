@@ -14,7 +14,6 @@ public class BaseTest {
     public void setup() {
         setUpProperties();
         open("");
-        page(HomePage.class);
     }
 
     @AfterTest
